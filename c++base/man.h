@@ -9,11 +9,19 @@ class man {
 	private:
 		int age;
 		string name;
+		
+		char address[100];
 	
 	public:
-		int get_age();
+		man(const man &it); 
+		
+		man(const char *address);
+		
+		int get_age() const;
 		
 		string get_name();
+		
+		const char *get_address();
 		
 		void set_age(int a);
 		
@@ -22,6 +30,8 @@ class man {
 		void say_hello() {
 			cout << "hello hello how low" << endl;
 		}
+		
+		void set_address(const char *);
 	
 };
 
