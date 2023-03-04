@@ -4,8 +4,8 @@
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = main.o man.o
-LINKOBJ  = main.o man.o
+OBJ      = main.o man.o mystring.o mystring-main.o
+LINKOBJ  = main.o man.o mystring.o mystring-main.o
 LIBS     = -L"D:/Programs/Dev-Cpp/MinGW64/lib" -L"D:/Programs/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
 INCS     = -I"D:/Programs/Dev-Cpp/MinGW64/include" -I"D:/Programs/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Programs/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"D:/Programs/Dev-Cpp/MinGW64/include" -I"D:/Programs/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Programs/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"D:/Programs/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
@@ -29,3 +29,9 @@ main.o: main.cpp
 
 man.o: man.cpp
 	$(CPP) -c man.cpp -o man.o $(CXXFLAGS)
+
+mystring.o: mystring.cpp
+	$(CPP) -c mystring.cpp -o mystring.o $(CXXFLAGS)
+
+mystring-main.o: mystring-main.cpp
+	$(CPP) -c mystring-main.cpp -o mystring-main.o $(CXXFLAGS)
