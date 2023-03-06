@@ -1,0 +1,15 @@
+// C语言使用gcc编译
+CC = gcc
+
+SRCS = max.c
+
+OBJS = $(SRCS.c=.o)
+
+// 在unix平台下，必须使用lib*.so的格式声明链接库
+EXEC = libmaxtool.so
+
+start: OBJS
+	$(CC) -o $(EXEC) $(OBJS)
+	
+.c.o:
+	$(CC) -o $@ -c $<

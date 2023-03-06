@@ -1,5 +1,7 @@
 #include "mystring.h"
 #include <cstring>
+#include <iostream>
+using namespace std;
 
 // 注意初始化的方式，这里static不是类型，是修饰符，所以不能写成 static type var这种形式
 mystring *mystring::self = NULL;
@@ -22,7 +24,7 @@ mystring::~mystring() {
 }
 
 // 创建字符串，单例的核心所在，通过一个静态变量self判断是否存在实例
-mystring *mystring::makestring(const char *str = NULL) {
+mystring *mystring::makestring(const char *str) {
 	// self如果为null，就创建一个，后续创建不为null就直接复用 
 	if (self == NULL) self = new mystring(str);
 	return self;

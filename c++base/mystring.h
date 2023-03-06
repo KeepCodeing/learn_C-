@@ -1,5 +1,7 @@
 #ifndef MYSTRING_H
 #define MYSTRING_H
+#include <iostream>
+using namespace std; 
 
 class mystring {
 	private:
