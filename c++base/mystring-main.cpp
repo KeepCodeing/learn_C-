@@ -2,7 +2,7 @@
 #include "mystring.h"
 using namespace std;
 
-int main() {
+int main1() {
 	// 对应直接传入字符串，调用有参构造 
 	mystring *str1 = mystring::makestring("hello world");
 	cout << str1->get_str() << endl;

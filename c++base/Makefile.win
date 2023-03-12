@@ -1,18 +1,19 @@
 # Project: c++base
-# Makefile created by Dev-C++ 5.11
+# Makefile created by Dev-C++ 6.7.5
 
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = main.o man.o mystring.o mystring-main.o max.o
-LINKOBJ  = main.o man.o mystring.o mystring-main.o max.o
-LIBS     = -L"D:/Programs/Dev-Cpp/MinGW64/lib" -L"D:/Programs/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
-INCS     = -I"D:/Programs/Dev-Cpp/MinGW64/include" -I"D:/Programs/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Programs/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
-CXXINCS  = -I"D:/Programs/Dev-Cpp/MinGW64/include" -I"D:/Programs/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Programs/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"D:/Programs/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+OBJ      = main.o man.o mystring.o mystring-main.o max.o 类与继承.o
+LINKOBJ  = main.o man.o mystring.o mystring-main.o max.o 类与继承.o
+LIBS     = -L"D:/Programs/Dev-Cpp/MinGW32/lib/gcc/i686-w64-mingw32/10.3.0/" -L"D:/Programs/Dev-Cpp/MinGW32/lib/gcc/" -L"D:/Programs/Dev-Cpp/MinGW32/i686-w64-mingw32/lib/" -L"D:/Programs/Dev-Cpp/MinGW32/lib/" -L"D:/Programs/Dev-Cpp/MinGW32/lib" -L"D:/Programs/Dev-Cpp/MinGW32/i686-w64-mingw32/lib" -static
+INCS     = -I"D:/Programs/Dev-Cpp/MinGW32/lib/gcc/i686-w64-mingw32/10.3.0/include" -I"D:/Programs/Dev-Cpp/MinGW32/include" -I"D:/Programs/Dev-Cpp/MinGW32/lib/gcc/i686-w64-mingw32/10.3.0/include-fixed" -I"D:/Programs/Dev-Cpp/MinGW32/i686-w64-mingw32/include"
+CXXINCS  = -I"D:/Programs/Dev-Cpp/MinGW32/include/c++/10.3.0" -I"D:/Programs/Dev-Cpp/MinGW32/include/c++/10.3.0/i686-w64-mingw32" -I"D:/Programs/Dev-Cpp/MinGW32/include/c++/10.3.0/backward" -I"D:/Programs/Dev-Cpp/MinGW32/lib/gcc/i686-w64-mingw32/10.3.0/include" -I"D:/Programs/Dev-Cpp/MinGW32/include" -I"D:/Programs/Dev-Cpp/MinGW32/lib/gcc/i686-w64-mingw32/10.3.0/include-fixed" -I"D:/Programs/Dev-Cpp/MinGW32/i686-w64-mingw32/include"
 BIN      = c++base.exe
 CXXFLAGS = $(CXXINCS) 
+ENCODINGS = -finput-charset=utf-8 -fexec-charset=gbk
 CFLAGS   = $(INCS) 
-RM       = rm.exe -f
+RM       = del /q /f
 
 .PHONY: all all-before all-after clean clean-custom
 
@@ -22,19 +23,22 @@ clean: clean-custom
 	${RM} $(OBJ) $(BIN)
 
 $(BIN): $(OBJ)
-	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+	$(CPP) $(LINKOBJ) -o "$(BIN)" $(LIBS)
 
-main.o: main.cpp
-	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+main.o: main.cpp man.h
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS) 
 
-man.o: man.cpp
-	$(CPP) -c man.cpp -o man.o $(CXXFLAGS)
+man.o: man.cpp man.h
+	$(CPP) -c man.cpp -o man.o $(CXXFLAGS) 
 
-mystring.o: mystring.cpp
-	$(CPP) -c mystring.cpp -o mystring.o $(CXXFLAGS)
+mystring.o: mystring.cpp mystring.h
+	$(CPP) -c mystring.cpp -o mystring.o $(CXXFLAGS) 
 
-mystring-main.o: mystring-main.cpp
-	$(CPP) -c mystring-main.cpp -o mystring-main.o $(CXXFLAGS)
+mystring-main.o: mystring-main.cpp mystring.h
+	$(CPP) -c mystring-main.cpp -o mystring-main.o $(CXXFLAGS) 
 
 max.o: max.c
-	$(CPP) -c max.c -o max.o $(CXXFLAGS)
+	$(CPP) -c max.c -o max.o $(CXXFLAGS) 
+
+类与继承.o: 类与继承.cpp
+	$(CPP) -c 类与继承.cpp -o 类与继承.o $(CXXFLAGS) 

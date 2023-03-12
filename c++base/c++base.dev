@@ -29,7 +29,12 @@ IncludeVersionInfo=0
 SupportXPThemes=0
 CompilerSet=0
 CompilerSettings=0000000000000000000000000
-UnitCount=7
+UnitCount=8
+UsePrecompiledHeader=0
+PrecompiledHeader=
+StaticLink=1
+AddCharset=1
+UseUTF8=0
 
 [VersionInfo]
 Major=1
@@ -59,6 +64,8 @@ Link=1
 Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
+DetectEncoding=0
+Encoding=0
 
 [Unit2]
 FileName=man.h
@@ -69,6 +76,8 @@ Link=1
 Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
+DetectEncoding=0
+Encoding=0
 
 [Unit3]
 FileName=man.cpp
@@ -79,6 +88,8 @@ Link=1
 Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
+DetectEncoding=0
+Encoding=0
 
 [Unit4]
 FileName=mystring.h
@@ -89,6 +100,8 @@ Link=1
 Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
+DetectEncoding=0
+Encoding=0
 
 [Unit5]
 FileName=mystring.cpp
@@ -99,6 +112,8 @@ Link=1
 Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
+DetectEncoding=0
+Encoding=0
 
 [Unit6]
 FileName=mystring-main.cpp
@@ -109,6 +124,8 @@ Link=1
 Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
+DetectEncoding=0
+Encoding=0
 
 [Unit7]
 FileName=max.c
@@ -119,4 +136,18 @@ Link=1
 Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
+DetectEncoding=0
+Encoding=0
+
+[Unit8]
+FileName=¿‡”ÎºÃ≥–.cpp
+CompileCpp=1
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+DetectEncoding=0
+Encoding=0
 
