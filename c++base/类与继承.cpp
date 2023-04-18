@@ -50,10 +50,10 @@ int main() {
 		father *f = new father;
 		son *s = static_cast<son *>(f);
 
-		cout << f->str << endl;
-		cout << s->str << endl;
+//		cout << f->str << endl;
+//		cout << s->str << endl;
 
-		f->say();
+//		f->say();
 		s->say();
 	}
 

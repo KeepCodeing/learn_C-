@@ -4,8 +4,8 @@
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = main.o man.o mystring.o mystring-main.o max.o 类与继承.o
-LINKOBJ  = main.o man.o mystring.o mystring-main.o max.o 类与继承.o
+OBJ      = main.o man.o mystring.o mystring-main.o max.o 类与继承.o test.o
+LINKOBJ  = main.o man.o mystring.o mystring-main.o max.o 类与继承.o test.o
 LIBS     = -L"D:/Programs/Dev-Cpp/MinGW32/lib/gcc/i686-w64-mingw32/10.3.0/" -L"D:/Programs/Dev-Cpp/MinGW32/lib/gcc/" -L"D:/Programs/Dev-Cpp/MinGW32/i686-w64-mingw32/lib/" -L"D:/Programs/Dev-Cpp/MinGW32/lib/" -L"D:/Programs/Dev-Cpp/MinGW32/lib" -L"D:/Programs/Dev-Cpp/MinGW32/i686-w64-mingw32/lib" -static
 INCS     = -I"D:/Programs/Dev-Cpp/MinGW32/lib/gcc/i686-w64-mingw32/10.3.0/include" -I"D:/Programs/Dev-Cpp/MinGW32/include" -I"D:/Programs/Dev-Cpp/MinGW32/lib/gcc/i686-w64-mingw32/10.3.0/include-fixed" -I"D:/Programs/Dev-Cpp/MinGW32/i686-w64-mingw32/include"
 CXXINCS  = -I"D:/Programs/Dev-Cpp/MinGW32/include/c++/10.3.0" -I"D:/Programs/Dev-Cpp/MinGW32/include/c++/10.3.0/i686-w64-mingw32" -I"D:/Programs/Dev-Cpp/MinGW32/include/c++/10.3.0/backward" -I"D:/Programs/Dev-Cpp/MinGW32/lib/gcc/i686-w64-mingw32/10.3.0/include" -I"D:/Programs/Dev-Cpp/MinGW32/include" -I"D:/Programs/Dev-Cpp/MinGW32/lib/gcc/i686-w64-mingw32/10.3.0/include-fixed" -I"D:/Programs/Dev-Cpp/MinGW32/i686-w64-mingw32/include"
@@ -42,3 +42,6 @@ max.o: max.c
 
 类与继承.o: 类与继承.cpp
 	$(CPP) -c 类与继承.cpp -o 类与继承.o $(CXXFLAGS) 
+
+test.o: test.cpp
+	$(CPP) -c test.cpp -o test.o $(CXXFLAGS) 
